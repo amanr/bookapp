@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Shelfari 1.0</title>
+        <link rel="stylesheet" href="css/screen.css">
+    </head>
+    <body>
+		<div id="books">
+			<form id="addBook" action="#">
+				<div>
+					<label for="title">Book Name: </label><input id="title" type="text" />
+					<label for="author">Author Name: </label><input id="author" type="text" />
+					<label for="status">Status:</label><select id="status">
+						<option value="Unknown">Choose Book Status</option>
+						<option value="Read">Read</option>
+						<option value="Not Yet Read">Not Yet Read</option>
+						</select>
+					<button id="add">Save</button>
+					<button id="find">Find</button>
+					<button id="findAll"> Find All</button>
+				</div>
+			</form>
+		</div>
+		<script id="bookTemplate" type="text/template">
+			<ul>
+				<li><%= title %></li>
+				<li><%= author %></li>
+				<li><%= status %></li>
+			</ul>
+			<button class="delete">Delete</button>
+			<button class="edit">Edit</button>
+		</script>
+        <script src="js/lib/jquery.js"></script>
+        <script src="js/lib/underscore.js"></script>
+        <script src="js/lib/backbone.js"></script>
+        <script src="js/models/book.js"></script>
+        <script src="js/collections/library.js"></script>
+        <script src="js/views/book.js"></script>
+        <script src="js/views/library.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
